@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.ProfileViews.AdminViews.QuestionViews.QuestionsManageView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Просмотреть все вопросы" Clicked="Show_Questions_Clicked" />
+            <Button Text="Создать вопрос" Clicked="Create_Question_Clicked"/>
+            <Button Text="Изменить вопрос" Clicked="Change_Question_Clicked"/>
+            <Button Text="Удалить вопрос" Clicked="Delete_Question_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

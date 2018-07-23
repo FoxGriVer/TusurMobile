@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.ProfileViews.AdminViews.AdminMenuView">
+    <ContentPage.Content>
+        <StackLayout Orientation=" Vertical" HorizontalOptions="Center">            
+            <Label Text="Панель администрирования" />
+            <Button Text="Управление вопросами" Clicked="Questions_Manage_Clicked"/>
+            <Button Text="Управление вариантами" Clicked="Variants_Manage_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

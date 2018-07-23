@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.ProfileViews.AdminViews.VariantsViews.ShowVariantPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,20,0,0">
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                <Label Text="id варианта вопроса:" />
+                <Entry Placeholder="id вопроса" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+                <Button Text="Найти" />
+                <Button Text="Завершить" Clicked="Apply_Clicked"/>
+                <Label Text="тут будет пришедший вариант" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

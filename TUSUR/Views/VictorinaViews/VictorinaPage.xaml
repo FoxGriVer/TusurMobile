@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.VictorinaViews.VictorinaPage" Title="Викторина">
+    <ScrollView>    
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" BackgroundColor="White" Padding="25,10,15,10" >                           
+                <Label Text="Проходя тесты, ты можешь получать баллы, а в последствии обменивать их на дополнительные баллы ЕГЭ при поступлении." />
+            </StackLayout>
+            
+            <Grid Grid.Row="1" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+                
+                <StackLayout Grid.Row="0" BackgroundColor="#F0EFF5" Padding="25,15,0,5">
+                    <Label Text="СЕГОДНЯШНИЙ ВОПРОС" TextColor="#7B7980" FontSize="Small" />
+                </StackLayout>
+                
+                <StackLayout Grid.Row="1">
+                    <ListView x:Name="ListOfCurrentVictorins" HasUnevenRows="true" SeparatorVisibility="None"                               
+                              ItemsSource="{Binding PresentVictorins}" ItemTapped="OnVictorinaItemTapped"
+                              >
+                        <ListView.ItemTemplate>                   
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="AUTO" />
+                                                    <RowDefinition Height="AUTO" />
+                                                </Grid.RowDefinitions>
+                                                <Label Grid.Row="0" Text="{Binding Name}" Margin="25,5,0,5"/>
+                                                <BoxView Grid.Row="1" Color="Gray" Style="{StaticResource GreyLinesInVictorine}" />        
+                                            </Grid>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="2" Margin="25,5,0,10">
+                    <Label Text="За правильный ответ вы получите 10 баллов." FontSize="Small" TextColor="#7B7980"/>
+                </StackLayout>
+                                                              
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+                
+                <StackLayout Grid.Row="0" BackgroundColor="#F0EFF5" Padding="25,15,0,5">
+                    <Label Text="ПРОШЕДШИЕ ТЕСТЫ" TextColor="#7B7980" FontSize="Small"/>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="1">
+                    <ListView x:Name="ListOfPastVictorins" HasUnevenRows="true" SeparatorVisibility="None"
+                              ItemsSource="{Binding PastVictorins}" ItemTapped="OnVictorinaItemTapped">
+                        <ListView.ItemTemplate>                   
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <StackLayout>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="AUTO" />
+                                                    <RowDefinition Height="AUTO" />
+                                                </Grid.RowDefinitions>
+                                                <Label Grid.Row="0" Text="{Binding Name}" Margin="25,5,0,5"/>
+                                                <BoxView Grid.Row="1" Color="Gray" Style="{StaticResource GreyLinesInVictorine}" />        
+                                            </Grid>
+                                        </StackLayout>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="2" Margin="25,5,0,10">
+                    <Label Text="За правильный ответ вы получите лишь 5 баллов." FontSize="Small" TextColor="#7B7980"/>
+                </StackLayout>
+                
+            </Grid>
+
+        </Grid>    
+    </ScrollView>
+</ContentPage>

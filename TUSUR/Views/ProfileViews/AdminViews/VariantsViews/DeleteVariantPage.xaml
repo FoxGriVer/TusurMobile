@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.ProfileViews.AdminViews.VariantsViews.DeleteVariantPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Label Text="Удаление варианта" HorizontalOptions="Center" Margin="0,0,0,20" />
+            <StackLayout Orientation="Horizontal" Margin="0,0,0,20">
+                <Label Text="id варианта:" />
+                <Entry Placeholder="Введите id" />
+            </StackLayout>           
+            <Button Text="Применить" Clicked="Apply_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.MasterDetailMainPage" Title="TUSUR">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="Aqua"> 
+            <ContentPage.Content>
+                <Button Text="text" />               
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Grid BackgroundColor="White" RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>                                         
+
+                    <Grid Grid.Row="0" ColumnSpacing="0" Style="{StaticResource DoubleBlocks}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                        </Grid.RowDefinitions>
+                        <Image Source="userPicture.png" Grid.Column="0" Grid.Row="0" />
+                        <StackLayout Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Orientation="Vertical" >
+                            <Label Text="Константин Константинопольский" />
+                            <Label Text="поступающий на бакалавриат" TextColor="#158AC2" FontSize="Small"/>
+                            <Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"
+                                BackgroundColor="#005AAE" Text="Редактировать" TextColor="White" 
+                                FontSize="Large" Margin="0,10,40,0" />
+                            <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="12" Style="{StaticResource cifriFont}" />
+                                    <Label Text="место на поступление" Style="{StaticResource blueSmallText}" TextColor="#158AC2" />
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="547" Style="{StaticResource cifriFont}" />
+                                    <Label Text="баллов в викторине" Style="{StaticResource blueSmallText}" TextColor="#158AC2" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>           
+                    </Grid>
+
+                    <Grid Grid.Row="1" >
+                        <Frame Style="{StaticResource AnketaBlock}" HasShadow="true">
+                        <AbsoluteLayout> 
+                            <Label Text="Анкета"  AbsoluteLayout.LayoutBounds=".03, 0.9"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+                            <Image Source="anketa.png" AbsoluteLayout.LayoutBounds="1, 0"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                        </AbsoluteLayout>  
+                    </Frame>
+                    </Grid>
+                    <Grid Grid.Row="2" Style="{StaticResource DoubleBlocks}">            
+                        <Frame Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource OneOfDoubleBlocks}">
+                            <AbsoluteLayout> 
+                                <Label Text="Викторина"  AbsoluteLayout.LayoutBounds=".07, 0.9"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                <Image Source="viktorina.png" AbsoluteLayout.LayoutBounds="1, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Frame Grid.Column="3" Grid.ColumnSpan="2" Style="{StaticResource OneOfDoubleBlocks}">
+                            <AbsoluteLayout> 
+                                <Label Text="Результаты"  AbsoluteLayout.LayoutBounds=".2, 0.9"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                <Image Source="resultati.png" AbsoluteLayout.LayoutBounds="1, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                    </Grid>
+
+                    <Grid Grid.Row="3" Style="{StaticResource DoubleBlocks}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Column="0" Grid.ColumnSpan="3" Style="{StaticResource OneOfDoubleBlocks}">
+                            <AbsoluteLayout> 
+                                <Label Text="Мероприятия" FontSize="Medium" AbsoluteLayout.LayoutBounds=".1, 0.9"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                <Image Source="meropriatia.png" AbsoluteLayout.LayoutBounds="1, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional"/>
+                            </AbsoluteLayout>
+                        </Frame>
+                        <Frame Grid.Column="3" Grid.ColumnSpan="3" BackgroundColor="#158AC2" Style="{StaticResource OneOfDoubleBlocks}">
+                            <AbsoluteLayout> 
+                                <Label Text="Моя конкурсная ситуация" TextColor="White" Margin="10,0,0,0"
+                                     AbsoluteLayout.LayoutBounds="0.1, 0.9"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional" />                   
+                            </AbsoluteLayout>
+                        </Frame>
+                    </Grid>        
+                    </Grid>
+            </ContentPage.Content>
+        </ContentPage>        
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

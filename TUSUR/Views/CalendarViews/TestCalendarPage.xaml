@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.CalendarViews.TestCalendarPage">
+    <ContentPage.Content>        
+        <!--
+        <StackLayout Orientation="Horizontal">
+            <Image Source="galochka" WidthRequest="50" IsVisible="{Binding Path=IsSelected}"/>
+            <Label Text="{Binding Path=Name}" />
+            <Button x:Name="ButtonOfSubject" Text="Кнопка" Clicked="Button_Clicked" />
+        </StackLayout>
+        -->
+        <Label x:Name="testing"/>
+
+    </ContentPage.Content>
+</ContentPage>

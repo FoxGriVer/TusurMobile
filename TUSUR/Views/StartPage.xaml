@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TUSUR.Views" x:Class="TUSUR.Views.StartPage" Title="MasterApp"> 
+    <MasterDetailPage.Master>
+        <ContentPage Icon="menuBtn.png" Title="Master" BackgroundColor="White">
+            <ContentPage.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="AUTO" />
+                        <RowDefinition Height="AUTO" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" Margin="0,20,0,0">
+                        <Image Source="userPicture.png" />
+                        <Label Text="Константин Константинопольский" HorizontalTextAlignment="Center" Margin="0,-30,0,0"/>
+                        <Label Text="поступающий на бакалавриат" TextColor="#158AC2" FontSize="Small" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <Grid Grid.Row="1" RowSpacing="0" Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                            <RowDefinition Height="AUTO" />
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                            </Grid.RowDefinitions>
+                            
+                            <BoxView Grid.Row="0" Color="Gray" HeightRequest=".7"/>
+                            <StackLayout Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal" Padding="10,15,0,0" x:Name="ProfileStack">
+                                <AbsoluteLayout Margin="0">
+                                    <Image Source="MasterDetailResources/LichniiKabinetLogo.png" WidthRequest="24"
+                                           AbsoluteLayout.LayoutBounds="0, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                </AbsoluteLayout>
+                                <AbsoluteLayout Margin="10,0,0,0">
+                                    <Grid AbsoluteLayout.LayoutBounds="0, 0"
+                                         AbsoluteLayout.LayoutFlags="PositionProportional">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="AUTO" />
+                                            <RowDefinition Height="AUTO" />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Text="Личный кабинет" VerticalTextAlignment="Center" Margin="0,0,0,5"/>
+                                        <BoxView Grid.Row="1" Color="Gray" Style="{StaticResource GreyLinesInMasterDetail}" />
+                                    </Grid>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                        </Grid>
+
+                        <StackLayout Grid.Row="1" Orientation="Horizontal" Padding="10,15,0,0" >
+                            <AbsoluteLayout Margin="0">
+                                <Image Source="MasterDetailResources/KakPostypitLogo.png" WidthRequest="24"
+                                       AbsoluteLayout.LayoutBounds="0, 0"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+                            </AbsoluteLayout>
+                            <AbsoluteLayout Margin="10,0,0,0">
+                                <Grid AbsoluteLayout.LayoutBounds="0, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="AUTO" />
+                                        <RowDefinition Height="AUTO" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="Как поступить" VerticalTextAlignment="Center" Margin="0,0,0,5" />
+                                    <BoxView Grid.Row="1" Color="Gray" Style="{StaticResource GreyLinesInMasterDetail}" />
+                                </Grid>
+                            </AbsoluteLayout>
+                        </StackLayout>
+                        
+                        <StackLayout Grid.Row="2" Orientation="Horizontal" Padding="10,15,0,0" x:Name="DirectionsStack">
+                            <AbsoluteLayout Margin="0">
+                                <Image Source="MasterDetailResources/NapravleniaLogo.png" WidthRequest="24"
+                                       AbsoluteLayout.LayoutBounds="0, 0"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+                            </AbsoluteLayout>
+                            <AbsoluteLayout Margin="10,0,0,0">
+                                <Grid AbsoluteLayout.LayoutBounds="0, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="AUTO" />
+                                        <RowDefinition Height="AUTO" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="Направления подготовки" VerticalTextAlignment="Center" Margin="0,0,0,5" />
+                                    <BoxView Grid.Row="1" Color="Gray" Style="{StaticResource GreyLinesInMasterDetail}" />
+                                </Grid>
+                            </AbsoluteLayout>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="3" Orientation="Horizontal" Padding="10,15,0,0" x:Name="VictorinaStack" >
+                            <AbsoluteLayout Margin="0">
+                                <Image Source="MasterDetailResources/VictorinaLogo.png" WidthRequest="24"
+                                       AbsoluteLayout.LayoutBounds="0, 0"
+                                 AbsoluteLayout.LayoutFlags="PositionProportional" />
+                            </AbsoluteLayout>
+                            <AbsoluteLayout Margin="10,0,0,0">
+                                <Grid AbsoluteLayout.LayoutBounds="0, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="AUTO" />
+                                        <RowDefinition Height="AUTO" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="Викторина" VerticalTextAlignment="Center" Margin="0,0,0,5" />
+                                    <BoxView Grid.Row="1" Color="Gray" Style="{StaticResource GreyLinesInMasterDetail}" />
+                                </Grid>
+                            </AbsoluteLayout>
+                        </StackLayout>
+                        
+                        <Grid Grid.Row="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="AUTO" />
+                                <RowDefinition Height="AUTO" />
+                            </Grid.RowDefinitions>
+                            
+                            <StackLayout Grid.Row="0" Grid.RowSpan="2" Orientation="Horizontal" Padding="10,15,0,0" x:Name="CalculatorStack">
+                                <AbsoluteLayout Margin="0">
+                                    <Image Source="MasterDetailResources/CalculatorLogo.png" WidthRequest="24"
+                                           AbsoluteLayout.LayoutBounds="0, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional" />
+                                </AbsoluteLayout>
+                                <AbsoluteLayout Margin="10,0,0,0">
+                                <Grid AbsoluteLayout.LayoutBounds="0, 0"
+                                     AbsoluteLayout.LayoutFlags="PositionProportional">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="AUTO" />
+                                        <RowDefinition Height="AUTO" />
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Row="0" Text="Калькулятор ЕГЭ" VerticalTextAlignment="Center" Margin="0,0,0,10"/>
+                                </Grid>
+                            </AbsoluteLayout>
+                            </StackLayout>
+                            <BoxView Grid.Row="1" Color="Gray" HeightRequest=".7"/>
+                        </Grid>
+                    </Grid>
+
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Margin="0,10,0,25" x:Name="tusurLogo">
+                        <Image Source="tusurLogo.png" />
+                    </StackLayout>
+                </Grid>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="DetailPage" VerticalOptions="Center" HorizontalOptions="Center" />
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

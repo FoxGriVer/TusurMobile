@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TUSUR.Views.DirectionViews.DirectionsListView" Title="Направления подготовки">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="AUTO"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Orientation="Vertical" Margin="0,15,0,0">
+                    <Image Source="Direction/radioFacultet.png" HorizontalOptions="Start" Margin="15,0,0,10" />
+                    <BoxView Color="Gray" HeightRequest="0.7" />
+                </StackLayout>
+
+
+                <ListView Grid.Row="1" HasUnevenRows="true" SeparatorVisibility="None"
+                              Margin="0,0,0,0" ItemsSource="{Binding ListOfDirections}"
+                          ItemTapped="OnDirectionItemTapped" >
+                    <ListView.ItemTemplate>                   
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout>     
+                                        <Grid Padding="15,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="AUTO" />
+                                                <RowDefinition Height="AUTO" />
+                                            </Grid.RowDefinitions>
+                                            <StackLayout Grid.Row="0" Orientation="Horizontal" >
+                                                <Label Text="{Binding Path=Name}" />
+                                                <Label Text="{Binding Path=Code}" TextColor="#7B7980" FontSize="Micro" HorizontalOptions="Start" VerticalOptions="Center" Margin="0,0,15,0" WidthRequest="80"/>
+                                            </StackLayout>
+                                            
+                                            <Grid Grid.Row="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="AUTO" />
+                                                    <RowDefinition Height="AUTO" />
+                                                </Grid.RowDefinitions>
+                                                <StackLayout Grid.Row="0" Orientation="Horizontal">
+                                                    <StackLayout Orientation="Vertical">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="Количество мест:" FontSize="Small"/>
+                                                            <Label Text="{Binding Path=PayPlaces}" FontSize="Small"/>
+                                                            <Label Text="п / " FontSize="Small"/>
+                                                            <Label Text="{Binding Path=FreePlaces}" FontSize="Small"/>
+                                                            <Label Text="б" FontSize="Small"/>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="Балл 2016:" FontSize="Small"/>
+                                                            <Label Text="{Binding Path=MinBall}" FontSize="Small"/>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="Стоимость:" FontSize="Small"/>
+                                                            <Label Text="{Binding Path=Price}" FontSize="Small"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                    <Image Source="Direction/arrow.png" VerticalOptions="Center" HorizontalOptions="End" Margin="20,0,15,0"/>
+                                                </StackLayout>
+                                                <BoxView Grid.Row="1" Color="Gray" HeightRequest="0.7" Margin="0,10,50,0" />
+                                            </Grid>
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>    
+                <BoxView Grid.Row="2" Color="Gray" HeightRequest="0.7" />
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Orientation="Vertical" Margin="0,15,0,0">
+                    <Image Source="Direction/radioFacultet.png" HorizontalOptions="Start" Margin="15,0,0,10" />
+                    <BoxView Color="Gray" HeightRequest="0.7" />
+                </StackLayout>
+                
+                <ListView Grid.Row="1" HasUnevenRows="true" SeparatorVisibility="None"
+                              Margin="0,0,0,0" ItemsSource="{Binding ListOfDirections}"                          >
+                    <ListView.ItemTemplate>                   
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout>     
+                                        <Grid Padding="15,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="AUTO" />
+                                                <RowDefinition Height="AUTO" />
+                                            </Grid.RowDefinitions>
+                                            <StackLayout Grid.Row="0" Orientation="Horizontal" >
+                                                <Label Text="{Binding Path=Name}" />
+                                                <Label Text="{Binding Path=Code}" TextColor="#7B7980" FontSize="Micro" HorizontalOptions="Start" VerticalOptions="Center" Margin="0,0,15,0" WidthRequest="80"/>
+                                            </StackLayout>
+                                            
+                                            <Grid Grid.Row="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="AUTO" />
+                                                    <RowDefinition Height="AUTO" />
+                                                </Grid.RowDefinitions>
+                                                <StackLayout Grid.Row="0" Orientation="Horizontal">
+                                                    <StackLayout Orientation="Vertical">
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="Количество мест:" FontSize="Small"/>
+                                                            <Label Text="{Binding Path=PayPlaces}" FontSize="Small"/>
+                                                            <Label Text="п / " FontSize="Small"/>
+                                                            <Label Text="{Binding Path=FreePlaces}" FontSize="Small"/>
+                                                            <Label Text="б" FontSize="Small"/>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="Балл 2016:" FontSize="Small"/>
+                                                            <Label Text="{Binding Path=MinBall}" FontSize="Small"/>
+                                                        </StackLayout>
+                                                        <StackLayout Orientation="Horizontal">
+                                                            <Label Text="Стоимость:" FontSize="Small"/>
+                                                            <Label Text="{Binding Path=Price}" FontSize="Small"/>
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                    <Image Source="Direction/arrow.png" VerticalOptions="Center" HorizontalOptions="End" Margin="20,0,15,0"/>
+                                                </StackLayout>
+                                                <BoxView Grid.Row="1" Color="Gray" HeightRequest="0.7" Margin="0,10,50,0" />
+                                            </Grid>
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>                    
+            </Grid>
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>
