@@ -1,0 +1,11 @@
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/bin/Debug/netcoreapp2.0/TusurWebAPI.deps.json
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/bin/Debug/netcoreapp2.0/TusurWebAPI.runtimeconfig.json
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/bin/Debug/netcoreapp2.0/TusurWebAPI.runtimeconfig.dev.json
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/bin/Debug/netcoreapp2.0/TusurWebAPI.dll
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/bin/Debug/netcoreapp2.0/TusurWebAPI.pdb
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/obj/Debug/netcoreapp2.0/TusurWebAPI.csprojResolveAssemblyReference.cache
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/obj/Debug/netcoreapp2.0/TusurWebAPI.csproj.CoreCompileInputs.cache
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/obj/Debug/netcoreapp2.0/TusurWebAPI.AssemblyInfoInputs.cache
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/obj/Debug/netcoreapp2.0/TusurWebAPI.AssemblyInfo.cs
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/obj/Debug/netcoreapp2.0/TusurWebAPI.dll
+/Users/pavelsmirnov/Projects/TusurWebAPI/TusurWebAPI/obj/Debug/netcoreapp2.0/TusurWebAPI.pdb
